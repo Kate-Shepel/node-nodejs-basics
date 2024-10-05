@@ -12,7 +12,7 @@ const errorMsg = 'FS operation failed';
 const copy = async () => {
     try {
         const filesToBeCopied = await readdir(sourceDir);
-        console.log(filesToBeCopied);
+
         await mkdir(targetDir);
         await Promise.all(
             filesToBeCopied.map(file =>
